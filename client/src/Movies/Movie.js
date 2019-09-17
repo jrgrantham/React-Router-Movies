@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import MovieCard from './MovieCard';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState(null);
@@ -34,7 +35,8 @@ const Movie = (props) => {
   
   return (
     <div className="save-wrapper">
-      <div className="movie-card">
+      <MovieCard key={movie.id} movie={movie} />
+      {/* <div className="movie-card">
         <h2>{title}</h2>
         <div className="movie-director">
           Director: <em>{director}</em>
@@ -44,12 +46,12 @@ const Movie = (props) => {
         </div>
         <h3>Actors</h3>
 
-        {/* {stars.map(star => (
+        {stars.map(star => (
           <div key={star} className="movie-star">
             {star}
           </div>
-        ))} */}
-      </div>
+        ))}
+      </div> */}
       <div className="save-button">Save</div>
     </div>
   );

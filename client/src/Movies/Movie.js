@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState({});
- 
+
   useEffect(() => {
     const id = 1;
     // change ^^^ that line and grab the id from the URL
@@ -31,6 +31,7 @@ const Movie = (props) => {
   }
 
   const { title, director, metascore, stars } = movie;
+  
   return (
     <div className="save-wrapper">
       <div className="movie-card">
@@ -43,11 +44,11 @@ const Movie = (props) => {
         </div>
         <h3>Actors</h3>
 
-        {stars.map(star => (
+        {/* {stars.map(star => (
           <div key={star} className="movie-star">
             {star}
           </div>
-        ))}
+        ))} */}
       </div>
       <div className="save-button">Save</div>
     </div>
